@@ -1,0 +1,149 @@
+/***************** Global styles ****************/
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Lato:300,400&display=swap');
+
+:root {
+  --color-theme: #116193;
+  --secondary: #01d9db;
+  --accent: #9b9b9b;
+  --text: #575656;
+  --list-background: #ebebeb;
+  --single-background: #f2f2f2;
+  --white: #ffffff;
+  --font-Abel: 'Abel';
+  --font-Lato: 'Lato';
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 1 rem = 10px; 10px/16px = 62.5% */
+  font-size: 62.5%;
+
+}
+
+::selection {
+  background-color: var(--color-theme);
+  color: var(--white);
+}
+
+body {
+  box-sizing: border-box;
+  font: var(--font-Abel);
+  overflow-x: hidden;
+  background-color: var(--white);
+  font-family: var(--font-Abel);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-column {
+  width: 90%;
+  max-width: 114em;
+  margin: 3em auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/***************** media queries ************/
+
+
+@media screen and (min-width: 65rem) and (max-width: 79rem) {
+
+  .details .poster img {
+    padding: 1em;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 64.95rem) {
+  html {
+    font-size: 60%;
+  }
+
+  .movie {
+    flex-direction: column;
+  }
+
+  .movie .poster img {
+    width: 100%;
+  }
+
+  .container-column {
+    margin: 1.6em auto;
+  }
+
+  /****** single movie section *****/
+
+  .details .movie {
+    padding: 0 1em;
+  }
+
+  .details {
+    flex-direction: column-reverse;
+  }
+
+  .details .poster {
+    padding: 0;
+  }
+
+  .details .poster img {
+    width: 100%;
+    max-height: 32em;
+  }
+
+  .details .info table tr th {
+    font-size: 1.4em;
+    padding: 0 0.75em;
+  }
+
+
+  .details .info table tr td {
+    font-size: 1.3em;
+    padding: 0 0.75em;
+  }
+
+
+}
+
+@media screen and (max-width: 32rem) {
+  html {
+    font-size: 56%;
+  }
+
+  .search-section input {
+    padding-left: 1.6em;
+  }
+
+  .movies-section .info-header h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .movies-section .info-body .rate {
+    position: relative;
+    right: 20px;
+  }
+
+  /***** single movie section **** */
+
+
+}
